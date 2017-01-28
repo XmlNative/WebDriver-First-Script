@@ -1,0 +1,13 @@
+﻿<Script>
+	<Nav type='GoToUrl' url='http://localhost:58000/#/customers' >
+		<FindElement elementName='ListViewMenu' type='ByXPath'  url='//ul//li[contains(.,"List View")]' />
+		<Verify elementName='ListViewMenu' type='Attribute'  attribute='class' contains='active'/>
+		<Nav elementName='ListViewMenu' type='Click' >
+			<Verify elementName='ListViewMenu' type='Attribute'  attribute='class' contains='active' />
+			<FindElement elementName='CardContainer' type='ByClassName'  className='cardContainer' />
+			<Verify elementName='CardContainer' type='Displayed' is='False'/>
+			<FindElement elementName='GridContainer' type='ByClassName'  className='gridContainer' />
+			<Verify elementName='GridContainer' type='Displayed' is='True'/>
+		</Nav>
+	</Nav>
+</Script>

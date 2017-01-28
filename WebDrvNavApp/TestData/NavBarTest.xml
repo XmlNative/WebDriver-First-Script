@@ -1,0 +1,13 @@
+﻿<WDScript nextNIdx="11">
+  <WDriver nIdx="1" pageElement='' method='NavGoToUrl' url='http://localhost:41787' />
+  <WDriver nIdx="2" pageElement='Home:About' method='FindElement' by='LinkText' linkText='About' />
+  <WElement nIdx="3" pageElement='Home:About' method='Click' />
+  <WDriver nIdx="4" pageElement='Home:Students' method='FindElement' by='LinkText' linkText='Students' />
+  <WElement nIdx="5" pageElement='Home:Students' method='Click' />
+  <WDriver nIdx="6" pageElement='Home:Courses' method='FindElement' by='LinkText' linkText='Courses' />
+  <WElement nIdx="7" pageElement='Home:Courses' method='Click' />
+  <WDriver nIdx="8" pageElement='Home:Instructors' method='FindElement' by='LinkText' linkText='Instructors' />
+  <WElement nIdx="9" pageElement='Home:Instructors' method='Click' />
+  <WDriver nIdx="9" pageElement='Home:Departments' method='FindElement' by='LinkText' linkText='Departments' />
+  <WElement nIdx="10" pageElement='Home:Departments' method='Click' />
+</WDScript>

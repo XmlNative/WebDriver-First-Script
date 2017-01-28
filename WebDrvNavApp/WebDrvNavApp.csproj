@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{90CA76E2-88D7-498A-993B-E5567C8EBBAF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebDrvNavApp</RootNamespace>
+    <AssemblyName>WebDrvNavApp</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Selenium.WebDriverBackedSelenium">
+      <HintPath>..\..\..\..\..\..\..\Libraries\selenium-dotnet-3.0.0\net40\Selenium.WebDriverBackedSelenium.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="ThoughtWorks.Selenium.Core">
+      <HintPath>..\..\..\..\..\..\..\Libraries\selenium-dotnet-3.0.0\net40\ThoughtWorks.Selenium.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver, Version=2.46.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Libraries\selenium-dotnet-3.0.0\net40\WebDriver.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver.Support">
+      <HintPath>..\..\..\..\..\..\..\Libraries\selenium-dotnet-3.0.0\net40\WebDriver.Support.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bldrs\ScriptBldr.cs" />
+    <Compile Include="Bldrs\WDBldr.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WebDrvScriptForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WebDrvScriptForm.Designer.cs">
+      <DependentUpon>WebDrvScriptForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="WebDrvScriptForm.resx">
+      <DependentUpon>WebDrvScriptForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Libraries\selenium-dotnet-3.0.0\WebDriver.chm" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="chromedriver.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Libraries\chromedriver\chromedriver.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Libraries\selenium-dotnet-3.0.0\net35\Selenium.WebDriverBackedSelenium.dll" />
+    <Content Include="Libraries\selenium-dotnet-3.0.0\net35\Selenium.WebDriverBackedSelenium.pdb" />
+    <Content Include="Libraries\selenium-dotnet-3.0.0\net35\Selenium.WebDriverBackedSelenium.xml" />
+    <Content Include="Libraries\selenium-dotnet-3.0.0\net35\ThoughtWorks.Selenium.Core.dll" />
+    <Content Include="Libraries\selenium-dotnet-3.0.0\net35\ThoughtWorks.Selenium.Core.pdb" />
+    <Content Include="Libraries\selenium-dotnet-3.0.0\net35\ThoughtWorks.Selenium.Core.xml" />
+    <Content Include="Libraries\selenium-dotnet-3.0.0\net35\WebDriver.dll" />
+    <Content Include="Libraries\selenium-dotnet-3.0.0\net35\WebDriver.pdb" />
+    <Content Include="Libraries\selenium-dotnet-3.0.0\net35\WebDriver.Support.dll" />
+    <Content Include="Libraries\selenium-dotnet-3.0.0\net35\WebDriver.Support.pdb" />
+    <Content Include="Libraries\selenium-dotnet-3.0.0\net35\WebDriver.Support.xml" />
+    <Content Include="Libraries\selenium-dotnet-3.0.0\net35\WebDriver.xml" />
+    <Content Include="Libraries\selenium-dotnet-3.0.0\net40\Selenium.WebDriverBackedSelenium.dll" />
+    <Content Include="Libraries\selenium-dotnet-3.0.0\net40\Selenium.WebDriverBackedSelenium.pdb" />
+    <Content Include="Libraries\selenium-dotnet-3.0.0\net40\Selenium.WebDriverBackedSelenium.xml" />
+    <Content Include="Libraries\selenium-dotnet-3.0.0\net40\ThoughtWorks.Selenium.Core.dll" />
+    <Content Include="Libraries\selenium-dotnet-3.0.0\net40\ThoughtWorks.Selenium.Core.pdb" />
+    <Content Include="Libraries\selenium-dotnet-3.0.0\net40\ThoughtWorks.Selenium.Core.xml" />
+    <Content Include="Libraries\selenium-dotnet-3.0.0\net40\WebDriver.dll" />
+    <Content Include="Libraries\selenium-dotnet-3.0.0\net40\WebDriver.pdb" />
+    <Content Include="Libraries\selenium-dotnet-3.0.0\net40\WebDriver.Support.dll" />
+    <Content Include="Libraries\selenium-dotnet-3.0.0\net40\WebDriver.Support.pdb" />
+    <Content Include="Libraries\selenium-dotnet-3.0.0\net40\WebDriver.Support.xml" />
+    <Content Include="Libraries\selenium-dotnet-3.0.0\net40\WebDriver.xml" />
+    <Content Include="TestData\NavBarTest.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
