@@ -98,6 +98,11 @@
     <Content Include="chromedriver.exe">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Images\Contoso University End Page.PNG" />
+    <Content Include="Images\Contoso University URL.PNG" />
+    <Content Include="Images\WebDrv Script Init Run All.PNG" />
+    <Content Include="Images\WebDrv Script Open NavBarTest.PNG" />
+    <Content Include="Images\WebDrv Script Open.PNG" />
     <Content Include="Images\WebDrv Script.PNG" />
     <Content Include="Libraries\chromedriver\chromedriver.exe">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
